@@ -1,38 +1,46 @@
 import { ActionCard } from "app/auth/components/dashboard/ActionCard"
 import { useState } from "react"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
+import GoalsCard from "app/auth/components/dashboard/GoalsCard"
+import { TiMessages } from "react-icons/ti"
 
 export const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const showSidebar = () => setSidebarOpen(!sidebarOpen)
   return (
     <>
-      <div className="flex  justify-between">
-        <h1 className="m-4 text-purple-500">Good Morning Emma</h1>
-        <button onClick={() => showSidebar()} className="m-4 pt-1">
+      <div className="flex mt-4">
+        <div className=" flex text-blue-700 left-0">
+          <TiMessages className="mx-4" style={{ width: "25px", height: "28px" }} />
+          <h1 className="font-bold">1:1 with John Doe</h1>
+        </div>
+        <button onClick={() => showSidebar()}>
           {!sidebarOpen ? (
             <span>
-              <IoIosArrowBack style={{ height: "25px", width: "30px" }} />
+              <IoIosArrowBack
+                className="absolute top-0 right-0"
+                style={{ height: "25px", width: "35px" }}
+              />
             </span>
           ) : (
             <nav
               className={
                 sidebarOpen
-                  ? "right-0"
-                  : "top-0 absolute transition duration-500  transform translate-x-100 "
+                  ? "right-0 fixed top-0"
+                  : "transition duration-500  transform translate-x-100 "
               }
             >
               <ul className="justify-center" onClick={() => showSidebar()}>
-                <li className="">
+                <li>
                   <div
                     className=" w-64
-                   h-auto bg-gray-50 rounded-lg"
+                    h-screen bg-gray-50 rounded-lg"
                   >
                     <button
                       onClick={() => {
                         showSidebar()
                       }}
-                      className="flex justify-start"
+                      className="flex left-0 relative"
                     >
                       {
                         <IoIosArrowForward
@@ -41,22 +49,14 @@ export const Header = () => {
                         />
                       }
                     </button>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
-                    <li>ajsdd ansjd sanks</li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
+                    <li> fdcvb wdw skhfa aghea ehgf </li>
                   </div>
                 </li>
               </ul>
