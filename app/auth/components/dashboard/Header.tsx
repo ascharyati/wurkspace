@@ -2,6 +2,9 @@ import { ActionCard } from "app/auth/components/dashboard/ActionCard"
 import { useState } from "react"
 import { IoIosArrowForward, IoIosArrowBack, IoIosCalendar, IoIosCog } from "react-icons/io"
 import GoalsCard from "app/auth/components/dashboard/GoalsCard"
+import InsightsCard from "app/auth/components/dashboard/InsightsCard"
+import AlertCard from "app/auth/components/dashboard/AlertCard"
+
 import {
   TiMessages,
   TiArrowForwardOutline,
@@ -66,7 +69,7 @@ export const Header = () => {
                 <li>
                   <div
                     className=" w-64 bg-fixed
-                    h-auto bg-gray-50 rounded-lg"
+                    min-h-full bg-gray-50 rounded-lg"
                   >
                     <button
                       onClick={() => {
@@ -77,7 +80,7 @@ export const Header = () => {
                       {
                         <IoIosArrowForward
                           style={{ height: "25px", width: "30px" }}
-                          className="m-4"
+                          className="m-2"
                         />
                       }
                     </button>
@@ -96,18 +99,21 @@ export const Header = () => {
                       <h1 style={{ fontSize: "15px" }}> Insights</h1>
                     </span>
                     <ul>
-                      <li></li>
+                      <li>
+                        <InsightsCard />
+                      </li>
                     </ul>
                     <span className="mx-4 flex left-0 relative text-blue-700">
                       <TiChartLineOutline
                         className="mr-2"
                         style={{ height: "20px", width: "20px" }}
                       />
-                      <h1 style={{ fontSize: "15px" }}> MyGoals</h1>
+                      <h1 style={{ fontSize: "15px" }}> Alerts</h1>
                     </span>
                     <ul>
                       <li>
-                        <GoalsCard />
+                        <AlertCard />
+                        <AlertCard />
                       </li>
                     </ul>
                   </div>
